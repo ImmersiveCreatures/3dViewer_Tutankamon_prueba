@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="tutankamon_V2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.52" camera-orbit="691.7deg 81.38deg auto" shadow-softness="1" environment-image="pillars_1k.hdr" exposure="1.03">
+      <button class="Hotspot" slot="hotspot-4" data-position="-3.152336094489568m 3.7021181704832493m -0.9682487827759623m" data-normal="-0.4168308900100852m 0.7287560373899306m 0.5432924139918818m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Relieve de Horus e inscripción del glifo de Tutankamón</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="2.211651780837606m 8.08707333335615m -2.9041411693566612m" data-normal="0.9475813685577164m 0.31374487062466316m -0.06044589414508617m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">La máscara mide 54 cm de alto, 39,3 cm de ancho y 49 cm de profundidad. Está formado por dos capas de oro de alto quilate, que varían de 1,5 a 3 mm de espesor y pesan 10,23 kg.</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="-0.3511444736205753m 4.684581499327522m -4.8349676837187125m" data-normal="0.00914552065121729m 0.2378740907702146m -0.9712529415102238m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Un hechizo protector está inscrito con jeroglíficos egipcios en la espalda y los hombros en diez líneas verticales y dos horizontales. El hechizo apareció por primera vez en máscaras en el Reino Medio, 500 años antes de Tutankamón, y se usó en el Capítulo 151 del Libro de los Muertos.</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
